@@ -1,19 +1,24 @@
-#include<stdio.h>
+﻿#include<stdio.h>
 #include<time.h>
 #include<stdlib.h>
-
+//二维数组random棋局实现。
 int main() {
-
+	srand(time(NULL));
 	int chess[10][10] = { 0 };
 	int x, y;
-	int count = 10;
+	int count = 0;
 
-	while (count--)
-	{
+	while (1)
+	{	
 		x = rand() % 10;
 		y = rand() % 10;
-
-		chess[x][y] = 1;
+		if (chess[x][y] != 1)
+		{
+			chess[x][y] = 1;
+			count++;
+			if (count == 10)
+				break;
+		}
 	}
 
 
