@@ -8,6 +8,18 @@ int main() {
 	int x, y;
 	int count = 0;
 
+	/*第一种方法*/
+	while (count<10)
+	{
+		x = rand() % 10;
+		y = rand() % 10;
+		if (chess[x][y] == 1)
+			continue;
+		chess[x][y] = 1;
+		count++;
+	}
+
+	/*第二种方法
 	while (1)
 	{	
 		x = rand() % 10;
@@ -20,6 +32,7 @@ int main() {
 				break;
 		}
 	}
+	*/
 
 
 	for (int i=0; i<10; i++)
